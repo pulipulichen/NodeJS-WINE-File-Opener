@@ -11,7 +11,7 @@ cd ..
 old="$IFS"
 IFS=';'
 str="'$*'"
-node main.js "$str"
+node pdf-editor.js "$str"
 IFS=$old
 
 cd $_mydir

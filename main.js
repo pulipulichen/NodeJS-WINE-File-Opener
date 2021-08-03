@@ -1,11 +1,33 @@
-const config = require('./config.js')
-
+//const config = require('./config.js')
 const handleFileFromArgv = require('./lib/cli/handleFileFromArgv.js')
+const execShellCommand = require('./lib/cli/execShellCommand.js')
 
-handleFileFromArgv({
-  lockKey: false,
-},(file) => {
-  console.log(file)
-  //let command = `wine "${config.appPath}" `
-})
+const path = require('path')
 
+module.exports = function (appPath) {
+
+  handleFileFromArgv({
+    lockKey: false,
+    runWithoutArgv: true
+  },(file) => {
+  
+    if (!file) {
+      execShellCommand(`wine "${appPath}"`)
+      return
+    }
+
+    file = path.resolve(file)
+    // console.log(file)
+  
+    let dirname = path.dirname(file)
+    let filename = path.basename(file)
+    //console.log(dirname)
+    
+    process.chdir(dirname)
+  
+    let command = `wine "${appPath}" "${filename}"`
+    //console.log(command)
+  
+    execShellCommand(command)
+  }) 
+}

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test20210803": "node main.js [test/20210803/sample.pdf"
+    "test20210803": "node pdf-editor.js"
   },
   "repository": {
     "type": "git",
