@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-wine-file-opener",
+  "version": "1.0.0",
+  "description": "Using WINE to open file.",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test20210803": "node main.js [test/20210803/sample.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen%40gmail.com@github.com/pulipulichen/NodeJS-WINE-File-Opener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/NodeJS-WINE-File-Opener/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/NodeJS-WINE-File-Opener#readme"
+}
