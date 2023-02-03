@@ -1,10 +1,12 @@
 //const config = require('./config.js')
 const handleFileFromArgv = require('./lib/cli/handleFileFromArgv.js')
 const execShellCommand = require('./lib/cli/execShellCommand.js')
+const PrimeRUN = require('./lib/prime-run.js')
 
 const path = require('path')
 
 module.exports = function (appPath) {
+  PrimeRUN()
 
   handleFileFromArgv({
     lockKey: false,
