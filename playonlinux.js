@@ -27,7 +27,7 @@ module.exports = function (appPath) {
     
     process.chdir(dirname)
   
-    let command = `${appPath} "${filename}"`
+    let command = `prime-run ${appPath} "${filename}"`
     //console.log(command)
   
     execShellCommand(command)
